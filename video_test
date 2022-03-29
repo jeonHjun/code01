@@ -1,0 +1,22 @@
+package com.example.myapplication;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+public class video_test extends Activity {
+        @SuppressLint("MissingSuperCall")
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            //
+            VideoView videoView = (VideoView)findViewById(R.id.vv);
+
+            final MediaController mediaController =
+                    new MediaController(this);
+            videoView.setMediaController(mediaController);
+        }
+    }
+
+
